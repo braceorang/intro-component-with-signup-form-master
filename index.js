@@ -1,4 +1,5 @@
 
+// -----------------------------------------------------------  Declare Variable  section  ----------------------------------------------------------- 
 var imgs = document.querySelectorAll("img");
 imgs.forEach(function (pic) {
     console.log(pic)
@@ -14,12 +15,6 @@ texts.forEach(function (element) {
 });
 
 
-// var inputs = document.querySelectorAll("input")
-// inputs.forEach(function(element){
-//     element.classList.
-// })
-
-
 var firstName = document.getElementById("fname");
 var lastName = document.getElementById("lname");
 var email = document.getElementById("email")
@@ -27,19 +22,30 @@ var password = document.getElementById("password");
 var setButton = document.getElementById("buttonTrial");
 
 
+// -------------------------------------------------------------------function section------------------------------------------------------------------------------ 
 
-console.log(firstName)
+
+function validateInfo(s) {
+    var rgx = /^.+$/;
+    return s.match(rgx)
+}
 
 
-setButton.addEventListener("click", function () {  
+
+// ------------------------------------------------------------------opertion section ------------------------------------------------------------------------
+
+setButton.addEventListener("click", function () {
     if (!validateInfo(firstName.value)) {
         firstName.classList.add("error");
         firstName.removeAttribute("placeholder");
         document.getElementById("img1").classList.remove("sucess")
         document.getElementById("text1").classList.remove("sucess")
-    }else{
+    } else {
+        firstName.classList.remove("error");
         document.getElementById("img1").classList.add("sucess")
         document.getElementById("text1").classList.add("sucess")
+
+
     }
 
 });
@@ -51,13 +57,16 @@ setButton.addEventListener("click", function () {
         lastName.removeAttribute("placeholder");
         document.getElementById("img2").classList.remove("sucess")
         document.getElementById("text2").classList.remove("sucess")
-    }else{
+    } else {
+        lastName.classList.remove("error");
         document.getElementById("img2").classList.add("sucess")
         document.getElementById("text2").classList.add("sucess")
     }
 });
 
-
+email.addEventListener("input", function () {
+    document.getElementById("text3Error").innerHTML = "";
+})
 setButton.addEventListener("click", function () {
     if (!validateInfo(email.value)) {
         email.classList.add("error")
@@ -65,7 +74,8 @@ setButton.addEventListener("click", function () {
         document.getElementById("text3Error").classList.remove("sucess");
         document.getElementById("img3").classList.remove("sucess");
         document.getElementById("text3").classList.remove("sucess");
-    }else{
+    } else {
+        email.classList.remove("error");
         document.getElementById("text3Error").classList.add("sucess");
         document.getElementById("img3").classList.add("sucess")
         document.getElementById("text3").classList.add("sucess")
@@ -78,22 +88,18 @@ setButton.addEventListener("click", function () {
         password.removeAttribute("placeholder");
         document.getElementById("img4").classList.remove("sucess")
         document.getElementById("text4").classList.remove("sucess")
-    }else{
+    } else {
+        password.classList.remove("error");
         document.getElementById("img4").classList.add("sucess")
         document.getElementById("text4").classList.add("sucess")
     }
 });
 
 
-function validateInfo(s) {
-    var rgx = /^.+$/;
-    return s.match(rgx)
-}
 
 
 
 
 
-// function valudateEmail(s){
-//     var rgx = /^.[8,12]
-// }
+
+

@@ -19,6 +19,9 @@ body{
 
 }
 
+/* 
+ l -----------------------------------------------------------eft-section ---------------------------------------------------------- */
+
 .left{
     display: block;
     box-sizing: border-box;
@@ -30,15 +33,6 @@ body{
  
 }
 
-
-
-
-.contentleft{
- 
-  
-}
-
-
 .contentleft h1{
     font-size: 3rem;
 }
@@ -48,7 +42,7 @@ body{
 }
 
 
-/* right-section */
+/*  -----------------------------------------------------------right-section--------------------------------------------------------- */
 
 .right{
     display: block;
@@ -57,8 +51,6 @@ body{
    
     
 }
-
-
 .try{
     display: block;
     color: white;
@@ -84,13 +76,6 @@ input:focus{
     border: hsla(248, 59%, 56%, 0.74)  solid 1px;
 
 }
-/* 
-input .iconError{
-    position: absolute;
-    right: 15px;
-    top:25px;
-    
-} */
 
 .free{
     display: block;
@@ -118,7 +103,7 @@ input .iconError{
     font-size: 0.6rem;
     text-align: center;
 }
-/* section err--------------------------- */
+/*  -----------------------------------------------------------section ERROR ----------------------------------------------------------------------------------- */
 
 .input1{
     position: relative;
@@ -128,12 +113,6 @@ input .iconError{
 .error{
     border: 0.5px solid rgba(233, 87, 87, 0.938);
 }
-
-/* .error::placeholder{
-    font-size: 16px;
-    color: red;
-   
-} */
 
 
 
@@ -165,10 +144,13 @@ input .iconError{
 
 
 .sucess{
-    display:none
+    display:none;
+
 }
 
 
+/* 
+ -----------------------------------------------------------section Media ------------------------------------------------------------- */
 
 @media (max-width:1024px) {
     .contentleft{
